@@ -15,7 +15,7 @@
 }
 
 .pipe {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 120px;
   right: -120px;
@@ -42,12 +42,11 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     /* Styles for mobile phones */
     body {
         max-width: 600px;
         margin: 0 auto;
-        animation: pipe-animation 1s infinite linear;
     }
   }
 
