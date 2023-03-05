@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu</title>
+    <script>
+      window.onload = function() {
+        // Check if local storage has player data for this device
+        if (localStorage.getItem("myGamePlayer")) {
+          console.log("Bem-Vindo de volta!");
+          function goToGamePage() {
+            window.location.href = "game.html";
+          }
+          setTimeout(goToGamePage, 3000);
+        } else {
+          // Prompt user to enter player name
+          const playerName = prompt("Por favor insira seu nome:");
+
+          // Save player data to local storage
+          localStorage.setItem("myGamePlayer", playerName);
+          console.log("Bem-Vindo, " + playerName + "!");
+        }
+      };
+    </script>
+    <style>
+      @media only screen and (max-width: 600px) {
+        /* Styles for mobile phones */
+        body {
+          max-width: 600px;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bem-Vindo ao meu jogo</h1>
+    <p>Divirta-se Jogando!</p>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Inicial</title>
+    <script>
+      function goToRankingPage() {
+        window.location.href = "ranking.html";
+      }
+
+      function goToGamePage() {
+        window.location.href = "start_game.html";
+      }
+    </script>
+    <style>
+      @media only screen and (max-width: 600px) {
+        body {
+            background-color: rgb(33, 196, 101);
+            max-width: 600px;
+            margin: 0 auto;
+            
+        }
+      }
+    </style>
+  </head>
+  <body>
+<h1>Bem vindo aou jogo da Desflorestação!</h1>
+<p>Se tu estiveres a ver a apresentação como um mero aluno cliques em "Game":</p>
+    <button onclick="goToRankingPage()">Ranking</button>
+    <button onclick="goToGamePage()">Game</button>
+  </body>
+</html>

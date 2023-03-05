@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 600px;
+    border-bottom: 10px solid rgba(14, 252, 53, 0.918);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #cef5ff);
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  right: -120px;
+  animation: pipe-animation 2s infinite linear;
+}
+
+.spider-man {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+       right: 0;
+    }
+
+    to {
+      right: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Styles for mobile phones */
+    body {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+  }
+
+@keyframes jump {
+     
+    0% {
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 210px;
+    }
+
+    50%{
+        bottom: 210px;
+    }
+
+    60%{
+        bottom: 210px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}

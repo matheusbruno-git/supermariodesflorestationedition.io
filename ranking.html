@@ -1,0 +1,61 @@
+<!-- This is the ranking page where players are ranked by their scores -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+  </head>
+  <body>
+    <h1>Ranking</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="player-rankings">
+      </tbody>
+    </table>
+
+    <script>
+      // Retrieve players from localStorage and sort by score
+      let players = JSON.parse(localStorage.getItem("players")) || [];
+      players.sort((a, b) => b.score - a.score);
+
+      // Display player rankings
+      const playerRankingsTable = document.getElementById("player-rankings");
+      for (let i = 0; i < players.length; i++) {
+        const player = players[i];
+        const rank = i + 1;
+        const name = player.name;
+        const score = player.score;
+
+        const row = document.createElement("tr");
+        const rankCell = document.createElement("td");
+        const nameCell = document.createElement("td");
+        const scoreCell = document.createElement("td");
+
+        rankCell.textContent = rank;
+        nameCell.textContent = name;
+        scoreCell.textContent = score;
+
+        row.appendChild(rankCell);
+        row.appendChild(nameCell);
+        row.appendChild(scoreCell);
+        playerRankingsTable.appendChild(row);
+      }
+    </script>
+    <style>
+      @media only screen and (max-width: 600px) {
+        /* Styles for mobile phones */
+        body {
+          max-width: 600px;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </body>
+</html>
