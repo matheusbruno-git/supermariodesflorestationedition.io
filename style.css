@@ -47,7 +47,7 @@
     body {
         max-width: 600px;
         margin: 0 auto;
-        animation: pipe-animation 4s infinite linear;
+        animation: pipe-animation 1s infinite linear;
     }
   }
 
