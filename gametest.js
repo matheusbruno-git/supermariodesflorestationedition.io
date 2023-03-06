@@ -50,6 +50,8 @@ const loop = setInterval(() => {
         spider.style.width = '150px'
         spider.style.marginLeft = '50px'
       
+        alert("Seu tempo foi de" + intervalId);
+      
         stopStopwatch();
 
         function goToQuizPage() {
