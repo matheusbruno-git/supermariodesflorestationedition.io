@@ -49,11 +49,13 @@ const loop = setInterval(() => {
         spider.src = "https://media.tenor.com/oJzzasSRmQEAAAAi/mario-mario-dead.gif";
         spider.style.width = '150px'
         spider.style.marginLeft = '50px'
+      
+        stopStopwatch();
 
         function goToQuizPage() {
             window.location.href = "quiz.html";
           }
-        setTimeout(goToQuizPage, 3000);
+        setTimeout(goToQuizPage, 5000);
 
         clearInterval(loop);
     }
