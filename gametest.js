@@ -1,3 +1,21 @@
+let startTime, intervalId;
+
+function startStopwatch() {
+  startTime = Date.now();
+  intervalId = setInterval(updateTime, 10);
+}
+
+function updateTime() {
+  const elapsed = Date.now() - startTime;
+  const seconds = Math.floor(elapsed / 1000);
+  const milliseconds = elapsed % 1000;
+  document.getElementById('time').textContent = `${seconds}.${milliseconds}`;
+}
+
+function stopStopwatch() {
+  clearInterval(intervalId);
+}
+
 const spider = document.querySelector('.spider-man');
 const pipe = document.querySelector('.pipe');
 let lifes = 3;
