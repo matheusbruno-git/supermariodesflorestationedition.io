@@ -16,6 +16,32 @@ function stopStopwatch() {
   clearInterval(intervalId);
 }
 
+function freeze() {
+        // Disable scrolling and user interaction
+        document.body.style.overflow = 'hidden';
+        document.body.style.pointerEvents = 'none';
+        
+        // Remove the button
+        var button = document.getElementsByTagName('button')[0];
+        button.parentNode.removeChild(button);
+        
+        // Add unfreeze button
+        var unfreezeButton = document.createElement('button');
+        unfreezeButton.innerHTML = 'Unfreeze';
+        unfreezeButton.onclick = unfreeze;
+        document.body.appendChild(unfreezeButton);
+}
+      
+function unfreeze() {
+        // Enable scrolling and user interaction
+        document.body.style.overflow = 'auto';
+        document.body.style.pointerEvents = 'auto';
+        
+        // Remove the unfreeze button
+        var unfreezeButton = document.getElementsByTagName('button')[0];
+        unfreezeButton.parentNode.removeChild(unfreezeButton);
+}
+
 const spider = document.querySelector('.spider-man');
 const pipe = document.querySelector('.pipe');
 let lifes = 3;
