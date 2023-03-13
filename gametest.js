@@ -21,7 +21,7 @@ function freeze() {
         document.body.style.overflow = 'hidden';
         document.body.style.pointerEvents = 'none';
   
-        pipe.style.animation = 'none';
+        pipe.style.animationPlayState = 'paused'
         
         // Remove the button
         var button = document.getElementsByTagName('button')[0];
@@ -38,7 +38,7 @@ function unfreeze() {
         // Enable scrolling and user interaction
         document.body.style.overflow = 'auto';
         document.body.style.pointerEvents = 'auto';
-        pipe.style.animation = 1s;
+        pipe.style.animationPlayState = 'running';
         
         // Remove the unfreeze button
         var unfreezeButton = document.getElementsByTagName('button')[0];
