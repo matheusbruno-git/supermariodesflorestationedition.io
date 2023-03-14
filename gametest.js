@@ -95,3 +95,4 @@ const loop = setInterval(() => {
 
 document.addEventListener('keydown', jump);
 document.addEventListener("touchstart", jump);
+window.addEventListener('load', freeze);
