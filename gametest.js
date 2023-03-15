@@ -39,6 +39,7 @@ function unfreeze() {
         document.body.style.overflow = 'auto';
         document.body.style.pointerEvents = 'auto';
         pipe.style.animationPlayState = 'running';
+        startStopwatch();
 }
 
 const spider = document.querySelector('.spider-man');
@@ -52,7 +53,7 @@ const jump = () => {
     setTimeout(() => {
 
         spider.classList.remove('jump');
-        let sumScores = score + 10;
+        score++;
 
     },500)
 }
@@ -75,7 +76,7 @@ const loop = setInterval(() => {
         spider.style.width = '150px'
         spider.style.marginLeft = '50px'
       
-        alert("Seu tempo foi de" + intervalId);
+        alert("Sua pontuação foi de " + score + " pontos");
       
         stopStopwatch();
 
