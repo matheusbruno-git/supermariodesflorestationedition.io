@@ -52,8 +52,8 @@
     .pipe {
        position: absolute;
        bottom: 0;
-       width: 80px;
-       right: -80px;
+       width: 100px;
+       right: -100px;
        animation: pipe-animation 1.4s infinite linear;
      }
     .game-board {
