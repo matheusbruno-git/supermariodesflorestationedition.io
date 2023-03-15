@@ -54,7 +54,7 @@
        bottom: 0;
        width: 60px;
        right: -60px;
-       animation: pipe-animation 1s infinite linear;
+       animation: pipe-animation 1.5s infinite linear;
      }
     .game-board {
        width: 100%;
@@ -64,6 +64,11 @@
        position: relative;
        overflow: hidden;
        background: linear-gradient(#87CEEB, #cef5ff);
+    }
+    .spider-man {
+       width: 120px;
+       position: absolute;
+       bottom: 0;
     }
   }
 
