@@ -52,9 +52,9 @@
     .pipe {
        position: absolute;
        bottom: 0;
-       width: 60px;
-       right: -60px;
-       animation: pipe-animation 1.5s infinite linear;
+       width: 80px;
+       right: -80px;
+       animation: pipe-animation 1.4s infinite linear;
      }
     .game-board {
        width: 100%;
