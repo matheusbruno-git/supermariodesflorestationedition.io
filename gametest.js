@@ -39,10 +39,6 @@ function unfreeze() {
         document.body.style.overflow = 'auto';
         document.body.style.pointerEvents = 'auto';
         pipe.style.animationPlayState = 'running';
-        
-        // Remove the unfreeze button
-        var unfreezeButton = document.getElementsByTagName('button')[0];
-        unfreezeButton.parentNode.removeChild(unfreezeButton);
 }
 
 const spider = document.querySelector('.spider-man');
@@ -94,5 +90,7 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener('keydown', jump);
+document.addEventListener('keydown', unfreeze);
 document.addEventListener("touchstart", jump);
+document.addEventListener("touchstart", unfreeze);
 window.addEventListener('load', freeze);
