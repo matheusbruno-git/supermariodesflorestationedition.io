@@ -67,6 +67,13 @@
         <br>
         <label><input type="radio" name="q2" value="c">c) As principais causas que levaram a esta destruição nas florestas são a indústria, a pecuária, a agricultura e a expansão urbana</label>
         <br>
+        <div class="quiz-question">Pergunta 3: Qual é a maior floresta existente no mundo</div>
+        <label><input type="radio" name="q3" value="a">a) Africa </label>
+        <br>
+        <label><input type="radio" name="q3" value="b">b) Amazonia </label>
+        <br>
+        <label><input type="radio" name="q3" value="c">c) Mata Atlântica </label>
+        <br>
         <button type="submit" class="quiz-submit">Entregar</button>
       </form>
     </div>
@@ -80,6 +87,7 @@
         // Get user answers
         const q1Answer = quizForm.querySelector('input[name="q1"]:checked').value;
         const q2Answer = quizForm.querySelector('input[name="q2"]:checked').value;
+        const q3Answer = quizForm.querySelector('input[name="q3"]:checked').value;
 
         // Check answers
         let score = 0;
@@ -87,6 +95,9 @@
           score++;
         }
         if (q2Answer === "c") {
+          score++;
+        }
+        if (q3Answer === "b") {
           score++;
         }
 
