@@ -30,8 +30,8 @@
       for (let i = 0; i < players.length; i++) {
         const player = players[i];
         const rank = i + 1;
-        const name = player.name;
-        const score = player.score;
+        const playerName = localStorage.getItem("myGamePlayer");
+        const score = document.getElementById("score").textContent = score;
 
         const row = document.createElement("tr");
         const rankCell = document.createElement("td");
