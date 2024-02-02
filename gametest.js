@@ -42,17 +42,17 @@ function unfreeze() {
         startStopwatch();
 }
 
-const spider = document.querySelector('.spider-man');
+const mario = document.querySelector('.mario-man');
 const pipe = document.querySelector('.pipe');
 let lifes = 3;
 let score = 0;
 
 const jump = () => {
-    spider.classList.add('jump');
+    mario.classList.add('jump');
 
     setTimeout(() => {
 
-        spider.classList.remove('jump');
+        mario.classList.remove('jump');
         score++;
 
     },500)
@@ -61,20 +61,20 @@ const jump = () => {
 const loop = setInterval(() => {
 
     const pipePosition = pipe.offsetLeft;
-    const spiderPosition = +window.getComputedStyle(spider).bottom.replace('px', '');
+    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
-    if (pipePosition <= 120 && pipePosition > 0 && spiderPosition < 80 && lifes > 0) {
+    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80 && lifes > 0) {
 
         pipe.style.animation = 'none';
         pipe.style.left =  `${pipePosition}px`;
         let loseLifes = lifes - 1;
 
-        spider.style.animation = 'none';
-        spider.style.bottom =  `${spiderPosition}px`;
+        mario.style.animation = 'none';
+        mario.style.bottom =  `${marioPosition}px`;
 
-        spider.src = "https://media.tenor.com/oJzzasSRmQEAAAAi/mario-mario-dead.gif";
-        spider.style.width = '150px'
-        spider.style.marginLeft = '50px'
+        mario.src = "https://media.tenor.com/oJzzasSRmQEAAAAi/mario-mario-dead.gif";
+        mario.style.width = '150px'
+        mario.style.marginLeft = '50px'
       
         alert("Sua pontuação foi de " + score + " pontos");
       

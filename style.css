@@ -22,7 +22,7 @@
   animation: pipe-animation 2s infinite linear;
 }
 
-.spider-man {
+.mario {
     width: 150px;
     position: absolute;
     bottom: 0;
@@ -41,36 +41,6 @@
       right: 100%;
     }
 }
-
-@media screen and (max-width: 767px) {
-    /* Styles for mobile phones */
-    body {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .pipe {
-       position: absolute;
-       bottom: 0;
-       width: 50px;
-       right: -50px;
-       animation: pipe-animation 1s infinite linear;
-     }
-    .game-board {
-       width: 100%;
-       height: 200px;
-       border-bottom: 10px solid rgba(14, 252, 53, 0.918);
-       margin: 0 auto;
-       position: relative;
-       overflow: hidden;
-       background: linear-gradient(#87CEEB, #cef5ff);
-    }
-    .spider-man {
-       width: 120px;
-       position: absolute;
-       bottom: 0;
-    }
-  }
 
 @keyframes jump {
      
